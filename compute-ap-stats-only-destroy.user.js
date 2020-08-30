@@ -76,9 +76,7 @@ window.plugin.compAPStatsOnlyDestroy.update = function(hasFinished) {
 
   var formatRow = function(team,data) {
     var title = 'Destroy and capture '+data.destroyPortals+' portals\n'
-              + 'Destroy '+data.destroyLinks+' links and '+data.destroyFields+' fields\n'
-              + 'Capture '+data.capturePortals+' neutral portals, complete '+data.finishPortals+' portals\n'
-              + '(unknown additional AP for links/fields)';
+              + 'Destroy '+data.destroyLinks+' links and '+data.destroyFields+' fields\n';
     return '<tr><td>'+team+'</td><td style="text-align:right" title="'+title+'">'+digits(data.AP)+'</td></tr>';
   }
 
@@ -128,7 +126,7 @@ window.plugin.compAPStatsOnlyDestroy.compAPStats = function() {
       result.res.destroyPortals++;
       if (!isFullyDeployed) {
         //result.enl.AP += completePortalAp;
-        result.enl.finishPortals++;
+        //result.enl.finishPortals++;
       }
     }
     else if (portal.options.team == TEAM_RES) {
@@ -136,7 +134,7 @@ window.plugin.compAPStatsOnlyDestroy.compAPStats = function() {
       result.enl.destroyPortals++;
       if (!isFullyDeployed) {
         //result.res.AP += completePortalAp;
-        result.res.finishPortals++;
+        //result.res.finishPortals++;
       }
     } else {
       // it's a neutral portal, potential for both teams.  by definition no fields or edges
