@@ -3,9 +3,9 @@
 // @name           IITC plugin: Compute AP statistics only destroy
 // @category       Info
 // @version        0.1.0
-// @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://static.iitc.me/build/release/plugins/compute-ap-stats.meta.js
-// @downloadURL    https://static.iitc.me/build/release/plugins/compute-ap-stats.user.js
+// @namespace      https://github.com/ReBootYourMind/iitc-addons
+// @updateURL      https://github.com/ReBootYourMind/iitc-addons/blob/master/compute-ap-stats-only-destroy.user.js
+// @downloadURL    https://github.com/ReBootYourMind/iitc-addons/blob/master/compute-ap-stats-only-destroy.user.js
 // @description    [iitc-2017-01-08-021732] Displays the per-team AP gains available by only destroying in the current view.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
