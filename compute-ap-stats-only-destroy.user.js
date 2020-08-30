@@ -115,7 +115,7 @@ window.plugin.compAPStatsOnlyDestroy.compAPStats = function() {
     var completePortalAp = 0;
     var isFullyDeployed = data.resCount == 8;
     if (!isFullyDeployed) {
-      //completePortalAp = data.resCount != 8 ? (8-data.resCount)*DEPLOY_RESONATOR + COMPLETION_BONUS : 0;
+      completePortalAp = data.resCount != 8 ? (8-data.resCount)*DEPLOY_RESONATOR + COMPLETION_BONUS : 0;
     }
 
     // AP to destroy this portal
