@@ -27,7 +27,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc';
 plugin_info.dateTimeVersion = '20170108.21732';
-plugin_info.pluginId = 'compute-ap-stats';
+plugin_info.pluginId = 'compute-ap-stats-only-destroy';
 //END PLUGIN AUTHORS NOTE
 
 
@@ -75,13 +75,13 @@ window.plugin.compAPStatsOnlyDestroy.update = function(hasFinished) {
   var loading = hasFinished ? '' : 'Loading...';
 
   var formatRow = function(team,data) {
-    var title = 'Destroy and capture '+data.destroyPortals+' portals\n'
+    var title = 'Destroy '+data.destroyPortals+' portals\n'
               + 'Destroy '+data.destroyLinks+' links and '+data.destroyFields+' fields\n';
     return '<tr><td>'+team+'</td><td style="text-align:right" title="'+title+'">'+digits(data.AP)+'</td></tr>';
   }
 
 
-  $('#available_ap_display').html('Available AP in this area: '
+  $('#available_ap_display').html('Available AP by destroying in this area: '
     + loading
     + '<table>'
     + formatRow('Enlightened',result.enl)
